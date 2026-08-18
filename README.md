@@ -17,6 +17,7 @@ Nada de segredo entra aqui.
 | PhotoEvolve | `/photoevolve/` · `privacy/` · `terms/` · `delete-account/` — idem em `/en/` e `/es/` |
 | PlantScan AI | `/plantscan/` · `privacy/` · `terms/` |
 | InBloom | `/inbloom/` · `privacy/` |
+| Idle Realms: Rise | `/idle-realms/` · `privacy/` · `terms/` · `delete-account/` |
 
 **Slugs em inglês em todos os apps**, inclusive nos de conteúdo em português: a URL é
 infraestrutura, não texto de leitura, e é o que revisor de loja espera encontrar.

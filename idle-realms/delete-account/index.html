@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Excluir dados — Idle Realms: Rise</title>
+<style>
+  :root {
+    --bg: #f4efe6;
+    --surface: #ffffff;
+    --ink: #241a0f;
+    --ink-dim: #6b5c47;
+    --accent: #96650c;
+    --accent-dim: #96650c22;
+    --line: #e2d6c2;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14100b;
+      --surface: #1c1610;
+      --ink: #f5ecdb;
+      --ink-dim: #a8987e;
+      --accent: #e8b84b;
+      --accent-dim: #e8b84b26;
+      --line: #33291b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14100b;
+    --surface: #1c1610;
+    --ink: #f5ecdb;
+    --ink-dim: #a8987e;
+    --accent: #e8b84b;
+    --accent-dim: #e8b84b26;
+    --line: #33291b;
+  }
+  :root[data-theme="light"] {
+    --bg: #f4efe6;
+    --surface: #ffffff;
+    --ink: #241a0f;
+    --ink-dim: #6b5c47;
+    --accent: #96650c;
+    --accent-dim: #96650c22;
+    --line: #e2d6c2;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .plate {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 48px clamp(24px, 6vw, 64px);
+  }
+
+  header.title-block {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: clamp(28px, 4.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .meta span { white-space: nowrap; }
+
+  section.clause {
+    margin-bottom: 36px;
+    scroll-margin-top: 24px;
+  }
+  section.clause:last-of-type { margin-bottom: 0; }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .clause-num {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .clause-body { max-width: 66ch; color: var(--ink); }
+  .clause-body p { margin: 0 0 12px; }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul { margin: 12px 0; padding-left: 20px; }
+  .clause-body li { margin-bottom: 8px; }
+  .clause-body li:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer.contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+  footer.contact a { color: var(--accent); font-weight: 600; }
+
+  @media (max-width: 560px) {
+    .sheet { padding: 32px 12px 64px; }
+    .plate { padding: 32px 20px; border-radius: 0; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <div class="plate">
+    <header class="title-block">
+      <p class="eyebrow">Documento legal · Idle Realms: Rise</p>
+      <h1>Excluir dados</h1>
+      <div class="meta">
+        <span>Última atualização: <strong>18 de agosto de 2026</strong></span>
+        <span>Idioma: <strong>Português (Brasil)</strong></span>
+      </div>
+    </header>
+
+    <section class="clause" id="s1">
+      <div class="clause-head"><span class="clause-num">§1</span><h2>Não existe conta pra excluir</h2></div>
+      <div class="clause-body">
+        <p>Idle Realms: Rise não pede e-mail, senha ou cadastro de nenhum tipo — não existe "conta" no sentido tradicional. O jogo cria só um identificador anônimo de sessão na primeira vez que abre, sem ligação com sua identidade real.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s2">
+      <div class="clause-head"><span class="clause-num">§2</span><h2>Progresso do jogo</h2></div>
+      <div class="clause-body">
+        <p>Nível, itens, ouro e todo o progresso do personagem ficam salvos <strong>localmente no seu aparelho</strong>, nunca nos nossos servidores. Pra apagar isso, use <strong>Configurações → Zona de Perigo → Resetar Save</strong> dentro do próprio jogo, ou simplesmente desinstale o app — nada fica retido do nosso lado.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s3">
+      <div class="clause-head"><span class="clause-num">§3</span><h2>Dados enviados ao ranking mundial</h2></div>
+      <div class="clause-body">
+        <p>Se você optou por enviar um recorde de chefe pro ranking mundial, associamos ao seu identificador anônimo: nome de jogador, país e o tempo de luta. Pra pedir a remoção desses dados, envie um e-mail pra <a href="mailto:contato@tessaroapps.com?subject=Excluir%20dados%20Idle%20Realms">contato@tessaroapps.com</a> com o assunto "Excluir dados Idle Realms", descrevendo o nome de jogador usado no ranking (é o único jeito de encontrarmos o registro, já que não existe login).</p>
+        <p>Confirmamos e concluímos o pedido em até 30 dias.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s4">
+      <div class="clause-head"><span class="clause-num">§4</span><h2>Compras</h2></div>
+      <div class="clause-body">
+        <p>Excluir dados do jogo não cancela nenhuma compra feita — quem processa isso é a loja (Apple App Store ou Google Play), não nós. Gerencie ou cancele diretamente por lá.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s5">
+      <div class="clause-head"><span class="clause-num">§5</span><h2>Contato</h2></div>
+      <div class="clause-body">
+        <p><a href="mailto:contato@tessaroapps.com">contato@tessaroapps.com</a></p>
+      </div>
+    </section>
+
+    <footer class="contact">
+      Idle Realms: Rise — RPG idle de combate automático com regras inspiradas em D&D.
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>

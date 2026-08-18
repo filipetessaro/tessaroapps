@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Termos de Uso — Idle Realms: Rise</title>
+<style>
+  :root {
+    --bg: #f4efe6;
+    --surface: #ffffff;
+    --ink: #241a0f;
+    --ink-dim: #6b5c47;
+    --accent: #96650c;
+    --accent-dim: #96650c22;
+    --line: #e2d6c2;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14100b;
+      --surface: #1c1610;
+      --ink: #f5ecdb;
+      --ink-dim: #a8987e;
+      --accent: #e8b84b;
+      --accent-dim: #e8b84b26;
+      --line: #33291b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14100b;
+    --surface: #1c1610;
+    --ink: #f5ecdb;
+    --ink-dim: #a8987e;
+    --accent: #e8b84b;
+    --accent-dim: #e8b84b26;
+    --line: #33291b;
+  }
+  :root[data-theme="light"] {
+    --bg: #f4efe6;
+    --surface: #ffffff;
+    --ink: #241a0f;
+    --ink-dim: #6b5c47;
+    --accent: #96650c;
+    --accent-dim: #96650c22;
+    --line: #e2d6c2;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .plate {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 48px clamp(24px, 6vw, 64px);
+  }
+
+  header.title-block {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: clamp(28px, 4.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .meta span { white-space: nowrap; }
+
+  nav.toc {
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+  }
+  nav.toc .toc-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 12px;
+  }
+  nav.toc ol {
+    columns: 2;
+    column-gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 8px; }
+  nav.toc a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  nav.toc .n { font-family: var(--mono); color: var(--accent); flex-shrink: 0; }
+
+  section.clause {
+    margin-bottom: 36px;
+    scroll-margin-top: 24px;
+  }
+  section.clause:last-of-type { margin-bottom: 0; }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .clause-num {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .clause-body { max-width: 66ch; color: var(--ink); }
+  .clause-body p { margin: 0 0 12px; }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul { margin: 12px 0; padding-left: 20px; }
+  .clause-body li { margin-bottom: 8px; }
+  .clause-body li:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer.contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+  footer.contact a { color: var(--accent); font-weight: 600; }
+
+  @media (max-width: 560px) {
+    .sheet { padding: 32px 12px 64px; }
+    .plate { padding: 32px 20px; border-radius: 0; }
+    nav.toc ol { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <div class="plate">
+    <header class="title-block">
+      <p class="eyebrow">Documento legal · Idle Realms: Rise</p>
+      <h1>Termos de Uso</h1>
+      <div class="meta">
+        <span>Última atualização: <strong>18 de agosto de 2026</strong></span>
+        <span>Idioma: <strong>Português (Brasil)</strong></span>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Sumário">
+      <p class="toc-label">Sumário</p>
+      <ol>
+        <li><a href="#s1"><span class="n">§1</span> O jogo</a></li>
+        <li><a href="#s2"><span class="n">§2</span> Compras dentro do app</a></li>
+        <li><a href="#s3"><span class="n">§3</span> Uso aceitável</a></li>
+        <li><a href="#s4"><span class="n">§4</span> Sem garantia</a></li>
+        <li><a href="#s5"><span class="n">§5</span> Privacidade</a></li>
+        <li><a href="#s6"><span class="n">§6</span> Alterações</a></li>
+        <li><a href="#s7"><span class="n">§7</span> Contato</a></li>
+      </ol>
+    </nav>
+
+    <section class="clause" id="s1">
+      <div class="clause-head"><span class="clause-num">§1</span><h2>O jogo</h2></div>
+      <div class="clause-body">
+        <p>Idle Realms: Rise ("o jogo") é desenvolvido por Filipe Tessaro. Ao jogar, você concorda com estes termos.</p>
+        <p>O jogo é um RPG idle grátis para jogar. Não é preciso pagar nada para acessar qualquer skill, zona, classe ou chefe do jogo — tudo é jogável só progredindo.</p>
+        <p>Contém violência fantasiosa leve (combate contra monstros, estilo D&D) e não é direcionado a crianças menores de 13 anos.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s2">
+      <div class="clause-head"><span class="clause-num">§2</span><h2>Compras dentro do app</h2></div>
+      <div class="clause-body">
+        <p>Todas as compras são <strong>cosméticas</strong> (temas visuais, títulos, cor de nome, vitrines extras, etc.) ou de <strong>conveniência</strong> (slots extras de personagem/atividade, tiers de progresso offline). Dinheiro real nunca compra dano, defesa, XP ou vantagem de combate sobre quem não pagou — essa é uma regra fixa do jogo.</p>
+        <p>Compras são processadas pela Apple App Store ou Google Play e são finais, sujeitas às políticas de reembolso de cada loja.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s3">
+      <div class="clause-head"><span class="clause-num">§3</span><h2>Uso aceitável</h2></div>
+      <div class="clause-body">
+        <p>Não use o jogo para assediar outros jogadores, incluindo através do nome de personagem ou do país exibido no ranking mundial de chefes. Nos reservamos o direito de remover um recorde do ranking mundial que viole isso.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s4">
+      <div class="clause-head"><span class="clause-num">§4</span><h2>Sem garantia</h2></div>
+      <div class="clause-body">
+        <p>O jogo é fornecido "como está", sem garantia de disponibilidade contínua, ausência de bugs, ou preservação permanente do progresso salvo localmente no seu aparelho. Recomendamos não depender do jogo como único registro de nada importante.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s5">
+      <div class="clause-head"><span class="clause-num">§5</span><h2>Privacidade</h2></div>
+      <div class="clause-body">
+        <p>Que dados o jogo coleta e como são usados está descrito na <a href="../privacy/">Política de Privacidade</a>, que faz parte destes termos.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s6">
+      <div class="clause-head"><span class="clause-num">§6</span><h2>Alterações</h2></div>
+      <div class="clause-body">
+        <p>Podemos atualizar estes termos ocasionalmente. A data no topo da página sempre reflete a versão mais recente.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s7">
+      <div class="clause-head"><span class="clause-num">§7</span><h2>Contato</h2></div>
+      <div class="clause-body">
+        <p><a href="mailto:contato@tessaroapps.com">contato@tessaroapps.com</a></p>
+      </div>
+    </section>
+
+    <footer class="contact">
+      Idle Realms: Rise — RPG idle de combate automático com regras inspiradas em D&D.
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>
