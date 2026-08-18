@@ -1,52 +1,67 @@
 # tessaroapps
 
-Site estático com as páginas de **privacidade, termos de uso e suporte** dos aplicativos.
-Publicado por GitHub Pages em **https://apps.tessaroapps.com**.
+Site estático com as páginas de **privacidade, termos de uso, exclusão de conta e suporte**
+de todos os aplicativos. Publicado por GitHub Pages em **https://apps.tessaroapps.com**.
 
 Repo público de propósito: as lojas exigem que essas URLs abram sem login.
 Nada de segredo entra aqui.
 
-## Estrutura
+## Mapa
 
-```
-index.html            hub com a lista de apps
-style.css             estilo compartilhado (claro e escuro)
-CNAME                 apps.tessaroapps.com
-devocional/
-  index.html          página do app + exclusão de conta
-  privacidade/        /devocional/privacidade/
-  termos/             /devocional/termos/
-```
+| App | Páginas |
+|---|---|
+| Devocional Diário | `/devocional/` · `privacy/` · `terms/` |
+| Íris | `/iris/` · `privacy/` · `terms/` · `delete-account/` · `psicologos/` |
+| GarageRank | `/garagerank/` · `privacy/` |
+| Coin Value Snap | `/coinsnap/` · `privacy/` · `delete-account/` |
+| PhotoEvolve | `/photoevolve/` · `privacy/` · `terms/` · `delete-account/` — idem em `/en/` e `/es/` |
+| PlantScan AI | `/plantscan/` · `privacy/` · `terms/` |
+| InBloom | `/inbloom/` · `privacy/` |
 
-Cada página é uma pasta com `index.html` para a URL ficar sem `.html` — o GitHub Pages
-não serve extensão implícita de forma confiável.
+**Slugs em inglês em todos os apps**, inclusive nos de conteúdo em português: a URL é
+infraestrutura, não texto de leitura, e é o que revisor de loja espera encontrar.
+
+Cada página é uma **pasta com `index.html`** — o GitHub Pages não serve extensão implícita
+de forma confiável. Por isso a **barra final** da URL importa.
 
 ## Um repo para todos os apps
 
-Substitui o padrão antigo de um repo por app (`iris-privacy`, `plantscan-ai-legal`,
-`coin-value-snap-privacy`, `photoevolve-site`, `garagerank-legal`, `inbloom-app-legal`).
-Para migrar um app: criar a pasta, copiar o conteúdo, apontar a loja para a URL nova e
-deixar o repo antigo com um redirect até a loja atualizar.
+Substitui o padrão antigo de um repo por app. Os seis repos originais continuam no ar,
+com cada página trocada por um redirect para cá:
+
+| Repo antigo | Vai para |
+|---|---|
+| `iris-privacy` | `/iris/` |
+| `plantscan-ai-legal` | `/plantscan/` |
+| `coin-value-snap-privacy` | `/coinsnap/` |
+| `photoevolve-site` | `/photoevolve/` |
+| `garagerank-legal` | `/garagerank/` |
+| `inbloom-app-legal` | `/inbloom/` |
+
+**Não apague esses repos.** As fichas das lojas ainda apontam para eles, e link quebrado
+em ficha publicada é motivo de suspensão. Arquivar só depois que todas as lojas estiverem
+apontando para cá.
+
+O conteúdo das páginas migradas **não foi reescrito** — são textos legais já aceitos por
+loja. O que mudou foi onde moram e os links internos, ajustados para a nova profundidade
+pelo script `migrar.py` (descartável, rodou uma vez).
 
 ## DNS
 
-O domínio `tessaroapps.com` está na HostGator e a **raiz não é tocada** — só o subdomínio:
+O domínio está na HostGator e a **raiz não é tocada** — só o subdomínio:
 
 | Tipo | Nome | Valor |
 |---|---|---|
 | CNAME | `apps` | `filipetessaro.github.io` |
 
-Depois, em Settings → Pages do repo: Source = branch `main`, Custom domain =
-`apps.tessaroapps.com`, e marcar **Enforce HTTPS** quando o certificado for emitido
-(leva alguns minutos após o DNS propagar).
+Em Settings → Pages: Source = branch `main`, Custom domain = `apps.tessaroapps.com`,
+e **Enforce HTTPS** quando o certificado for emitido.
 
-## Pendências antes de submeter o app às lojas
+## Pendências
 
-- [x] Criar a caixa **contato@tessaroapps.com** na HostGator.
-- [x] Razão social e CNPJ do controlador nas duas páginas.
+- [ ] Atualizar a URL de privacidade **na ficha de cada app** no Google Play e na App Store.
+- [ ] Atualizar os links **dentro do código** de cada app (só chega ao usuário com release novo).
+- [ ] Unificar o visual: as páginas migradas ainda usam o CSS que cada site tinha.
 - [ ] Conferir se o **objeto social / CNAE** da empresa cobre publicação de software —
-      a razão social é de treinamento profissional. Não impede publicar, mas é o tipo de
-      divergência que a contabilidade cobra depois.
-- [ ] Trocar "Devocional Diário" pelo **nome comercial** quando ele for definido.
-- [ ] Revisão jurídica. Os textos foram escritos a partir do que o app realmente coleta,
-      mas não substituem advogado.
+      a razão social é de treinamento profissional.
+- [ ] Revisão jurídica.
