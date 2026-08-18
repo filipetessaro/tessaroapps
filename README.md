@@ -42,10 +42,11 @@ Depois, em Settings → Pages do repo: Source = branch `main`, Custom domain =
 
 ## Pendências antes de submeter o app às lojas
 
-- [ ] Criar a caixa **contato@tessaroapps.com** na HostGator — as duas páginas apontam
-      para ela e a LGPD exige canal que responda de verdade.
-- [ ] Preencher **razão social e CNPJ** do controlador na Política de Privacidade
-      (hoje está só "Tessaro Apps, operada por Filipe Tessaro").
+- [x] Criar a caixa **contato@tessaroapps.com** na HostGator.
+- [x] Razão social e CNPJ do controlador nas duas páginas.
+- [ ] Conferir se o **objeto social / CNAE** da empresa cobre publicação de software —
+      a razão social é de treinamento profissional. Não impede publicar, mas é o tipo de
+      divergência que a contabilidade cobra depois.
 - [ ] Trocar "Devocional Diário" pelo **nome comercial** quando ele for definido.
 - [ ] Revisão jurídica. Os textos foram escritos a partir do que o app realmente coleta,
       mas não substituem advogado.
