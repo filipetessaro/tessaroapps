@@ -34,9 +34,13 @@ com cada página trocada por um redirect para cá:
 | `iris-privacy` | `/iris/` |
 | `plantscan-ai-legal` | `/plantscan/` |
 | `coin-value-snap-privacy` | `/coinsnap/` |
-| `photoevolve-site` | `/photoevolve/` |
+| `photocollector-site` (pasta local `photoevolve-site`) | `/photoevolve/` |
 | `garagerank-legal` | `/garagerank/` |
 | `inbloom-app-legal` | `/inbloom/` |
+
+O repo do PhotoEvolve chama `photocollector-site` no GitHub, nome anterior do app — a
+pasta local se chama `photoevolve-site` e aponta para ele. Procurar por "photoevolve" no
+GitHub não acha.
 
 **Não apague esses repos.** As fichas das lojas ainda apontam para eles, e link quebrado
 em ficha publicada é motivo de suspensão. Arquivar só depois que todas as lojas estiverem
