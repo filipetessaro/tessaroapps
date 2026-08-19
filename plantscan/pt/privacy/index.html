@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade do PlantScan AI</title>
+<style>
+  :root {
+    --bg: #faf9f5;
+    --surface: #f1f0e6;
+    --text: #1f2a1f;
+    --text-muted: #5c6b5c;
+    --accent: #3f8f5c;
+    --accent-soft: #e3efe6;
+    --border: #ddd9cc;
+    --font-display: Georgia, "Iowan Old Style", "Palatino Linotype", serif;
+    --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #14180f;
+      --surface: #1c2216;
+      --text: #eef1e8;
+      --text-muted: #9fae97;
+      --accent: #6cbf8e;
+      --accent-soft: #223228;
+      --border: #2c3426;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14180f;
+    --surface: #1c2216;
+    --text: #eef1e8;
+    --text-muted: #9fae97;
+    --accent: #6cbf8e;
+    --accent-soft: #223228;
+    --border: #2c3426;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0 20px 96px;
+  }
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+  header.hero {
+    padding: 56px 0 28px;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 36px;
+  }
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 5px 12px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(28px, 5vw, 38px);
+    font-weight: 600;
+    margin: 0 0 10px;
+    text-wrap: balance;
+  }
+  .meta {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+  }
+  h2 {
+    font-family: var(--font-display);
+    font-size: 21px;
+    font-weight: 600;
+    margin: 40px 0 12px;
+    scroll-margin-top: 20px;
+  }
+  h2 .num {
+    color: var(--accent);
+    font-variant-numeric: tabular-nums;
+    margin-right: 10px;
+  }
+  p, li { font-size: 16px; color: var(--text); }
+  p { margin: 0 0 14px; }
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 6px; }
+  strong { font-weight: 700; }
+  a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  nav.toc {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin-bottom: 8px;
+  }
+  nav.toc p {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 10px;
+  }
+  nav.toc ol {
+    margin: 0;
+    padding-left: 20px;
+    columns: 2;
+    column-gap: 24px;
+  }
+  nav.toc li { font-size: 14px; margin-bottom: 6px; break-inside: avoid; }
+  nav.toc a { color: var(--text); }
+  nav.toc a:hover { color: var(--accent); }
+
+  .callout {
+    background: var(--accent-soft);
+    border: 1px solid var(--accent);
+    border-radius: 8px;
+    padding: 14px 18px;
+    margin: 0 0 16px;
+  }
+  .callout p { margin: 0; font-size: 15px; }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-muted);
+    font-size: 14px;
+  }
+  footer a { color: var(--text-muted); }
+
+  @media (max-width: 480px) {
+    nav.toc ol { columns: 1; }
+    header.hero { padding-top: 40px; }
+  }
+
+  .lang-switch { font-size: 13px; opacity: .8; margin: 12px 0 0; }
+  .lang-switch a { text-decoration: none; }
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="hero">
+    <span class="eyebrow">🌱 PlantScan AI</span>
+    <h1>Política de Privacidade</h1>
+<p class="lang-switch">Idioma: <strong>PT</strong> · <a href="/plantscan/privacy/">EN</a> · <a href="/plantscan/es/privacy/">ES</a></p>
+    <p class="meta">Em vigor desde 13 de agosto de 2026</p>
+  </header>
+
+  <nav class="toc" aria-label="Table of contents">
+    <p>Nesta página</p>
+    <ol>
+      <li><a href="#overview">Visão geral</a></li>
+      <li><a href="#collect">Informações que coletamos</a></li>
+      <li><a href="#use">Como usamos</a></li>
+      <li><a href="#third-party">Serviços de terceiros</a></li>
+      <li><a href="#storage">Armazenamento &amp; segurança</a></li>
+      <li><a href="#direitos">Suas escolhas &amp; direitos</a></li>
+      <li><a href="#delete-account">Excluir sua conta</a></li>
+      <li><a href="#children">Privacidade de crianças</a></li>
+      <li><a href="#changes">Alterações nesta política</a></li>
+      <li><a href="#contact">Fale conosco</a></li>
+    </ol>
+  </nav>
+
+  <h2 id="overview"><span class="num">1</span>Visão geral</h2>
+  <p>O PlantScan AI ("o app", "nós") ajuda você a identificar plantas a partir de fotos, acompanhar o que encontrou e receber orientações básicas de cuidado e saúde. Esta política explica quais informações o app coleta, por quê, e que controle você tem sobre elas.</p>
+
+  <h2 id="collect"><span class="num">2</span>Informações que coletamos</h2>
+  <p><strong>Informações de conta.</strong> Quando você cria uma conta, coletamos seu e-mail e uma senha guardada com hash seguro, além de nome de usuário, avatar ou preferência de idioma que você escolher definir.</p>
+  <p><strong>Fotos e resultados de escaneamento.</strong> Quando você escaneia uma planta, a foto é enviada ao nosso provedor de identificação para ser analisada e depois é armazenada na sua conta, para aparecer na sua coleção. O resultado da identificação (espécie, confiança, notas de cuidado e — se você marcar essa opção — uma avaliação de saúde/doença) é guardado junto com a foto.</p>
+  <p><strong>Dados de uso.</strong> Podemos coletar eventos de uso básicos e agregados (por exemplo, que um escaneamento aconteceu, ou que uma tela de assinatura foi vista) para entender como o app é usado e melhorá-lo. Esses eventos não são vendidos nem compartilhados com anunciantes.</p>
+  <p><strong>Informações de compra.</strong> Se você assinar o Premium, a compra é processada inteiramente pela Apple App Store ou pela Google Play. Recebemos apenas o status da sua assinatura (ativa, expirada, etc.) — nunca os dados do seu cartão.</p>
+
+  <h2 id="use"><span class="num">3</span>Como usamos</h2>
+  <ul>
+    <li>Identificar plantas e gerar orientações de cuidado/saúde a partir das suas fotos</li>
+    <li>Mostrar seu próprio histórico de escaneamentos, sequências e distintivos</li>
+    <li>Alimentar o ranking opcional da comunidade (só o nome de usuário escolhido e a contagem de espécies aparecem para outros usuários — nunca seu e-mail ou suas fotos)</li>
+    <li>Gerenciar sua assinatura Premium e liberar os recursos que você pagou</li>
+    <li>Corrigir erros e entender quais partes do app são realmente usadas</li>
+  </ul>
+
+  <h2 id="third-party"><span class="num">4</span>Serviços de terceiros</h2>
+  <p>Contamos com um pequeno número de fornecedores confiáveis para operar o app, cada um com suas próprias práticas de privacidade:</p>
+  <ul>
+    <li><strong>Plant.id / Kindwise</strong> — analisa as fotos que você escaneia para identificar espécies e avaliar a saúde da planta.</li>
+    <li><strong>Supabase</strong> — hospeda nosso banco de dados, o armazenamento de arquivos e a autenticação de contas.</li>
+    <li><strong>RevenueCat, Apple App Store, Google Play</strong> — processam e gerenciam as assinaturas Premium.</li>
+    <li>Se no futuro introduzirmos anúncios em vídeo recompensados dentro do app, uma rede de anúncios será acrescentada aqui antes de esse recurso ser lançado.</li>
+  </ul>
+  <div class="callout">
+    <p>Não vendemos seus dados pessoais e não compartilhamos suas fotos ou seu histórico de escaneamentos com anunciantes.</p>
+  </div>
+
+  <h2 id="storage"><span class="num">5</span>Armazenamento &amp; segurança</h2>
+  <p>Seus dados ficam num banco Postgres protegido por segurança em nível de linha, o que significa que sua conta só consegue ler e escrever as próprias linhas — nenhuma outra conta do app enxerga seus escaneamentos ou seu perfil diretamente. As fotos ficam em armazenamento em nuvem com acesso restrito. Nenhum sistema é 100% seguro, mas tomamos medidas razoáveis e de padrão de mercado para proteger suas informações.</p>
+
+  <h2 id="direitos"><span class="num">6</span>Suas escolhas &amp; direitos</h2>
+  <ul>
+    <li><strong>Acessar ou exportar seus dados</strong> — entre em contato e enviaremos uma cópia do que temos sobre você.</li>
+    <li><strong>Excluir sua conta</strong> — veja a seção dedicada abaixo para saber como.</li>
+    <li><strong>Idioma</strong> — mude o idioma do app quando quiser, pelo seu perfil; isso afeta apenas o texto exibido, não os dados coletados.</li>
+    <li><strong>Sair da conta</strong> — disponível a qualquer momento na tela do seu perfil.</li>
+  </ul>
+
+  <h2 id="delete-account"><span class="num">7</span>Excluir sua conta</h2>
+  <p>Você pode excluir permanentemente sua conta do PlantScan AI a qualquer momento.</p>
+  <p><strong>Como solicitar:</strong> abra o app, vá até a tela do seu perfil e toque em "Excluir minha conta" — a exclusão acontece na hora, sem período de espera. Se não conseguir acessar o app, envie um e-mail para <a href="mailto:sphereoftopics@gmail.com?subject=Delete%20my%20PlantScan%20AI%20account">sphereoftopics@gmail.com</a> a partir do endereço vinculado à sua conta, com o assunto "Excluir minha conta PlantScan AI"; verificamos o pedido e confirmamos por e-mail assim que estiver concluído.</p>
+  <p><strong>O que é excluído:</strong> seu perfil (e-mail, nome de usuário, avatar, preferência de idioma), todas as fotos escaneadas, o histórico de escaneamentos e identificações, as sequências e os distintivos conquistados. Seu registro desaparece do ranking da comunidade imediatamente.</p>
+  <p><strong>O que pode ser retido, e por quanto tempo:</strong> o status da sua assinatura Premium ativa é gerenciado diretamente pela Apple App Store ou pela Google Play e não é afetado por este pedido — cancele-a separadamente na sua conta da loja se não quiser mais que ela renove. Para pedidos feitos por e-mail, podemos manter registros mínimos do próprio pedido (por exemplo, a data em que foi processado) por até 90 dias, para prevenção de fraude e suporte, e depois eles são eliminados. Nenhuma foto de escaneamento ou dado de planta é mantido após a exclusão.</p>
+  <p><strong>Prazo:</strong> a exclusão pelo app é imediata. Pedidos por e-mail são processados em até 30 dias.</p>
+
+  <h2 id="children"><span class="num">8</span>Privacidade de crianças</h2>
+  <p>O PlantScan AI não é direcionado a menores de 13 anos e não coletamos intencionalmente informações pessoais deles. Se você acredita que uma criança criou uma conta, entre em contato e nós a excluiremos.</p>
+
+  <h2 id="changes"><span class="num">9</span>Alterações nesta política</h2>
+  <p>Se fizermos uma mudança relevante na forma como tratamos seus dados, atualizaremos a data de vigência acima e, quando apropriado, avisaremos você no app.</p>
+
+  <h2 id="contact"><span class="num">10</span>Fale conosco</h2>
+  <p>Dúvidas sobre esta política ou sobre seus dados? Fale com a gente em <a href="mailto:sphereoftopics@gmail.com">sphereoftopics@gmail.com</a>.</p>
+
+  <footer>
+    <p>PlantScan AI — <a href="../terms/">Termos de Uso</a></p>
+  </footer>
+</div>
+</body>
+</html>

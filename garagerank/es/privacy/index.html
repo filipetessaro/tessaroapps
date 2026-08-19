@@ -1,0 +1,379 @@
+<title>Política de Privacidad — GarageRank</title>
+<style>
+  :root {
+    --bg: #eef0f3;
+    --surface: #ffffff;
+    --ink: #1b1f27;
+    --ink-dim: #5b6472;
+    --accent: #e8410f;
+    --accent-dim: #e8410f22;
+    --line: #d7dbe1;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14161b;
+      --surface: #1b1e25;
+      --ink: #edeef0;
+      --ink-dim: #9aa3af;
+      --accent: #ff6a3d;
+      --accent-dim: #ff6a3d26;
+      --line: #2a2e37;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14161b;
+    --surface: #1b1e25;
+    --ink: #edeef0;
+    --ink-dim: #9aa3af;
+    --accent: #ff6a3d;
+    --accent-dim: #ff6a3d26;
+    --line: #2a2e37;
+  }
+  :root[data-theme="light"] {
+    --bg: #eef0f3;
+    --surface: #ffffff;
+    --ink: #1b1f27;
+    --ink-dim: #5b6472;
+    --accent: #e8410f;
+    --accent-dim: #e8410f22;
+    --line: #d7dbe1;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .plate {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 48px clamp(24px, 6vw, 64px);
+  }
+
+  header.title-block {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: clamp(28px, 4.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .meta span { white-space: nowrap; }
+
+  nav.toc {
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+  }
+  nav.toc .toc-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 12px;
+  }
+  nav.toc ol {
+    columns: 2;
+    column-gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 8px; }
+  nav.toc a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  nav.toc .n { font-family: var(--mono); color: var(--accent); flex-shrink: 0; }
+
+  section.clause {
+    margin-bottom: 36px;
+    scroll-margin-top: 24px;
+  }
+  section.clause:last-of-type { margin-bottom: 0; }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .clause-num {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .clause-body { max-width: 66ch; color: var(--ink); }
+  .clause-body p { margin: 0 0 12px; }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul { margin: 12px 0; padding-left: 20px; }
+  .clause-body li { margin-bottom: 8px; }
+  .clause-body li:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  table.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  .table-wrap { overflow-x: auto; margin: 16px 0; }
+  table.data-table th,
+  table.data-table td {
+    text-align: left;
+    padding: 10px 12px;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+  table.data-table th {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    font-weight: 500;
+  }
+
+  .pill {
+    display: inline-block;
+    font-family: var(--mono);
+    font-size: 12px;
+    padding: 2px 8px;
+    border-radius: 100px;
+    background: var(--accent-dim);
+    color: var(--accent);
+    white-space: nowrap;
+  }
+
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer.contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+  footer.contact a { color: var(--accent); font-weight: 600; }
+
+  @media (max-width: 560px) {
+    .sheet { padding: 32px 12px 64px; }
+    .plate { padding: 32px 20px; border-radius: 0; }
+    nav.toc ol { columns: 1; }
+  }
+
+  .lang-switch { font-size: 13px; opacity: .8; margin: 12px 0 0; }
+  .lang-switch a { text-decoration: none; }
+</style>
+
+<div class="sheet">
+  <div class="plate">
+    <header class="title-block">
+      <p class="eyebrow">Documento legal · GarageRank</p>
+      <h1>Política de Privacidad</h1>
+<p class="lang-switch">Idioma: <a href="/garagerank/privacy/">PT</a> · <a href="/garagerank/en/privacy/">EN</a> · <strong>ES</strong></p>
+      <div class="meta">
+        <span>Última actualización: <strong>18 de agosto de 2026</strong></span>
+        <span>Idioma: <strong>Español</strong></span>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Índice">
+      <p class="toc-label">Índice</p>
+      <ol>
+        <li><a href="#s1"><span class="n">§1</span> Sobre este documento</a></li>
+        <li><a href="#s2"><span class="n">§2</span> Datos que recopilamos</a></li>
+        <li><a href="#s3"><span class="n">§3</span> Cómo usamos los datos</a></li>
+        <li><a href="#s4"><span class="n">§4</span> Con quién los compartimos</a></li>
+        <li><a href="#s5"><span class="n">§5</span> Almacenamiento y seguridad</a></li>
+        <li><a href="#s6"><span class="n">§6</span> Tus derechos (LGPD)</a></li>
+        <li><a href="#s7"><span class="n">§7</span> Eliminación de cuenta</a></li>
+        <li><a href="#s8"><span class="n">§8</span> Niños</a></li>
+        <li><a href="#s9"><span class="n">§9</span> Cambios</a></li>
+        <li><a href="#s10"><span class="n">§10</span> Contacto</a></li>
+      </ol>
+    </nav>
+
+    <section class="clause" id="s1">
+      <div class="clause-head"><span class="clause-num">§1</span><h2>Sobre este documento</h2></div>
+      <div class="clause-body">
+        <p>Esta política explica qué datos recopila la aplicación <strong>GarageRank</strong> , para qué sirven y qué derechos tienes sobre ellos. GarageRank es una app de catalogación y comunidad para coleccionistas de coches en miniatura (diecast).</p>
+        <p>Al crear una cuenta y usar la app, aceptas lo que aquí se describe.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s2">
+      <div class="clause-head"><span class="clause-num">§2</span><h2>Datos que recopilamos</h2></div>
+      <div class="clause-body">
+        <p>Recopilamos solo lo necesario para que la app funcione:</p>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead>
+              <tr><th>Dato</th><th>Finalidad</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Correo y contraseña</td><td>Crear y acceder a tu cuenta. La contraseña la gestiona Supabase Auth — nunca tenemos acceso a ella en texto claro.</td></tr>
+              <tr><td>Nombre de usuario y color del avatar</td><td>Mostrar tu perfil a ti y a otros usuarios (clasificación, feed).</td></tr>
+              <tr><td>Artículos de la colección (nombre, rareza, código de barras escaneado)</td><td>Armar tu garaje personal dentro de la app.</td></tr>
+              <tr><td>Fotos que subes de los coches</td><td>Mostrarlas en la ficha del artículo y, si se publican, en el feed de la comunidad.</td></tr>
+              <tr><td>Foto usada en "Identificar con IA"</td><td>Enviada al proveedor de IA (ver §4) solo en el momento de uso, para sugerir el modelo del coche.</td></tr>
+              <tr><td>Estado de suscripción</td><td>Saber si tu cuenta es Premium (gestionado por RevenueCat, ver §4).</td></tr>
+              <tr><td>Lista de deseos y artículos ofrecidos para intercambio</td><td>Mostrar lo que buscas y lo que ofreces, y acercar a quienes tienen intereses compatibles.</td></tr>
+              <tr><td>A quién sigues, clubes en los que participas y me gusta</td><td>Armar tu feed y la página de los clubes.</td></tr>
+              <tr><td>Mensajes directos intercambiados con otros usuarios</td><td>Entregar la conversación a ambas partes. No se usan para ninguna otra finalidad.</td></tr>
+              <tr><td>Bloqueos y denuncias</td><td>Hacer valer el bloqueo y revisar el contenido denunciado. La denuncia guarda quién denunció, el objetivo y el motivo.</td></tr>
+              <tr><td>Racha de días activos, puntuación e insignias</td><td>Calcular clasificaciones y logros.</td></tr>
+              <tr><td>Identificador de notificación del dispositivo (push token)</td><td>Enviar notificaciones de la app — un mensaje nuevo, actividad en tu contenido. Identifica al dispositivo, no a ti; desaparece cuando se elimina la cuenta.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>No recopilamos datos de pago directamente — de eso se encargan la tienda de aplicaciones (Google Play / App Store) y RevenueCat.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s3">
+      <div class="clause-head"><span class="clause-num">§3</span><h2>Cómo usamos los datos</h2></div>
+      <div class="clause-body">
+        <ul>
+          <li>Autenticarte y mantener tu sesión activa entre dispositivos.</li>
+          <li>Sincronizar tu colección personal en la nube.</li>
+          <li>Mostrar las fotos que decidas publicar en el feed, visibles para otros usuarios de la app.</li>
+          <li>Calcular clasificaciones públicas (coleccionista y fotógrafo) — solo recuentos agregados, nunca la lista individual de tus coches.</li>
+          <li>Procesar tu suscripción Premium, cuando corresponda.</li>
+          <li>Entregar mensajes directos, mantener los clubes y hacer valer bloqueos y denuncias.</li>
+          <li>Enviar notificaciones sobre actividad en tu cuenta, si lo permites.</li>
+        </ul>
+        <p>No usamos tus datos para publicidad ni los vendemos a terceros.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s4">
+      <div class="clause-head"><span class="clause-num">§4</span><h2>Con quién los compartimos</h2></div>
+      <div class="clause-body">
+        <p>Usamos los siguientes proveedores de servicio (encargados del tratamiento), cada uno solo con lo necesario para su función:</p>
+        <ul>
+          <li><span class="pill">Supabase</span> base de datos, autenticación y almacenamiento de fotos.</li>
+          <li><span class="pill">RevenueCat</span> gestión de la suscripción Premium.</li>
+          <li><span class="pill">Anthropic</span> procesa la foto enviada cuando usas la función "Identificar con IA" (Premium). La imagen se usa solo para generar la respuesta y no se usa para entrenar modelos.</li>
+          <li><span class="pill">Google Play / App Store</span> procesan el pago de la suscripción.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="clause" id="s5">
+      <div class="clause-head"><span class="clause-num">§5</span><h2>Almacenamiento y seguridad</h2></div>
+      <div class="clause-body">
+        <p>Tus datos se almacenan en los servidores de Supabase, protegidos por <em>Row Level Security</em> — por defecto, cada usuario solo puede leer o modificar sus propios artículos de colección. Conservamos tus datos mientras exista tu cuenta.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s6">
+      <div class="clause-head"><span class="clause-num">§6</span><h2>Tus derechos (LGPD)</h2></div>
+      <div class="clause-body">
+        <p>Según la Ley General de Protección de Datos de Brasil (LGPD), puedes en cualquier momento:</p>
+        <ul>
+          <li>Confirmar qué datos tenemos sobre ti y acceder a ellos.</li>
+          <li>Corregir datos incompletos o desactualizados.</li>
+          <li>Solicitar la eliminación de tus datos (ver §7).</li>
+          <li>Pedir la portabilidad de tus datos a otro servicio.</li>
+          <li>Revocar tu consentimiento en cualquier momento.</li>
+        </ul>
+        <p>Para ejercer cualquiera de estos derechos, escríbenos al correo del §10.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s7">
+      <div class="clause-head"><span class="clause-num">§7</span><h2>Eliminación de cuenta</h2></div>
+      <div class="clause-body">
+        <p><strong>Cómo solicitarlo:</strong> envía un correo a <a href="mailto:contato@tessaroapps.com?subject=Excluir%20minha%20conta%20GarageRank">contato@tessaroapps.com</a> con el asunto "Eliminar mi cuenta GarageRank", desde el correo registrado en la app. Confirmamos la solicitud en un plazo de 30 días.</p>
+        <p><strong>Qué se borra:</strong> cuenta de acceso, perfil (nombre de usuario, color del avatar), toda la colección de coches, fotos subidas y me gusta dados/recibidos.</p>
+        <p><strong>Qué puede conservarse:</strong> las copias de seguridad de la base de datos pueden retener los datos hasta <strong>30 días</strong> más después de confirmada la eliminación, antes de borrarse definitivamente. No retenemos ningún dato más allá de ese periodo de copia de seguridad.</p>
+        <p><strong>Eliminación parcial:</strong> no hace falta eliminar la cuenta entera para borrar datos concretos — cualquier coche, foto o me gusta puede eliminarse directamente dentro de la app, en cualquier momento, sin solicitud por correo.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s8">
+      <div class="clause-head"><span class="clause-num">§8</span><h2>Niños</h2></div>
+      <div class="clause-body">
+        <p>GarageRank no está dirigido a menores de 13 años y no recopila de forma intencionada datos de niños de esa franja de edad.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s9">
+      <div class="clause-head"><span class="clause-num">§9</span><h2>Cambios en esta política</h2></div>
+      <div class="clause-body">
+        <p>Podemos actualizar este documento cuando la app cambie. La fecha en la parte superior de la página siempre refleja la versión más reciente.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s10">
+      <div class="clause-head"><span class="clause-num">§10</span><h2>Contacto</h2></div>
+      <div class="clause-body">
+        <p>Dudas sobre privacidad o solicitudes relacionadas con tus datos: <a href="mailto:contato@tessaroapps.com">contato@tessaroapps.com</a></p>
+      </div>
+    </section>
+
+    <footer class="contact">
+      GarageRank — catalogación y comunidad para coleccionistas de diecast.
+    </footer>
+  </div>
+</div>

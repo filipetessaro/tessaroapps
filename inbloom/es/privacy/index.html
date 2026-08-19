@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InBloom — Política de Privacidad</title>
+<style>
+  :root { color-scheme: light dark; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem 4rem;
+    line-height: 1.6;
+    color: #2b1230;
+    background: #fff;
+  }
+  @media (prefers-color-scheme: dark) {
+    body { color: #FDF2F8; background: #160314; }
+    a { color: #FFB84D; }
+    th { background: #3C1338 !important; }
+    td, th { border-color: #4A1D45 !important; }
+  }
+  h1 { color: #E23A6E; }
+  h2 { margin-top: 2rem; border-bottom: 2px solid #E23A6E; padding-bottom: 0.3rem; }
+  table { border-collapse: collapse; width: 100%; margin: 1rem 0; }
+  th, td { border: 1px solid #ddd; padding: 0.5rem 0.75rem; text-align: left; }
+  th { background: #f6e9f4; }
+  code { background: rgba(226,58,110,0.12); padding: 0.1rem 0.3rem; border-radius: 4px; }
+  .updated { color: #888; font-size: 0.9rem; }
+
+  .lang-switch { font-size: 13px; opacity: .8; margin: 12px 0 0; }
+  .lang-switch a { text-decoration: none; }
+</style>
+</head>
+<body>
+<p style="margin-bottom:1.5rem;"><a href="../">InBloom</a> · <a href="../terms/">Términos de Uso</a> · <a href="../delete-account/">Eliminar cuenta</a></p>
+<h1>Política de Privacidad — InBloom</h1>
+<p class="lang-switch">Idioma: <a href="/inbloom/pt/privacy/">PT</a> · <a href="/inbloom/privacy/">EN</a> · <strong>ES</strong></p>
+<p class="updated">Última actualización: 31 de julio de 2026</p>
+
+<p>InBloom ("la App") es una app de juegos de intimidad para parejas, publicada por Tessaro Development. Esta política explica qué datos recopila la App, por qué y cómo se tratan. InBloom está destinada únicamente a mayores de 18 años.</p>
+
+<h2>1. Restricción de edad</h2>
+<p>Al usar InBloom confirmas que tienes al menos 18 años. La App no verifica la edad con un documento oficial — depende de tu confirmación en la pantalla de verificación. Si eres menor de 18 años, no uses esta App.</p>
+
+<h2>2. Datos que recopilamos</h2>
+<p><strong>Identificador de cuenta.</strong> Cuando abres la App por primera vez, se crea una cuenta anónima para tu dispositivo mediante Supabase Authentication. Esa cuenta no tiene correo, nombre, teléfono ni ninguna otra información identificativa asociada — es un identificador aleatorio usado únicamente para controlar el acceso al contenido de pago.</p>
+<p><strong>Compras.</strong> Las compras de suscripción las procesan Apple App Store / Google Play y se gestionan mediante RevenueCat. RevenueCat recibe tu identificador anónimo de cuenta y el estado de la compra/suscripción (activa, vencida, etc.) para que la App desbloquee el contenido de pago. No recibimos ni almacenamos tus datos de pago (número de tarjeta, dirección de facturación) — de eso se encargan íntegramente Apple/Google.</p>
+<p><strong>Contenido que escribes en la App.</strong> Los nombres de la pareja, la "palabra de seguridad" compartida, las selecciones de intereses, las respuestas de los cuestionarios, las confesiones, los elementos de la lista de deseos y el historial de juegos se guardan <strong>solo en tu dispositivo</strong> mediante almacenamiento local. Esa información nunca se sube a nuestros servidores ni se comparte con nosotros, salvo lo descrito a continuación.</p>
+<p><strong>Contenido explícito de los juegos.</strong> Una vez que tu suscripción desbloquea el contenido de pago, la App descarga contenido de juego en texto (de nuestra base de datos) relativo a los juegos que juegas. Es de un solo sentido — nosotros enviamos contenido a la App; no recibimos de vuelta tus elecciones de juego.</p>
+<p><strong>Códigos de invitación.</strong> Si decides invitar a otra pareja, la App genera un código corto vinculado a tu ID anónimo de cuenta y lo almacena en nuestros servidores. Si alguien introduce ese código, registramos que hubo un canje (vinculando dos IDs anónimos) para que ambas cuentas reciban la bonificación. No se intercambia ningún nombre, contacto ni otro dato identificativo — solo los IDs anónimos ya descritos.</p>
+
+<h2>3. Lo que NO recopilamos</h2>
+<ul>
+  <li>No se usa ningún SDK de analítica o seguimiento en la App.</li>
+  <li>No se recopila ningún identificador publicitario.</li>
+  <li>Ninguna herramienta de informes de errores ni de marketing de terceros tiene acceso a tus datos.</li>
+  <li>No recopilamos contactos, fotos, ubicación ni identificadores del dispositivo más allá del ID anónimo de cuenta descrito arriba.</li>
+</ul>
+
+<h2>4. Compartición de datos</h2>
+<p>Compartimos el mínimo de datos necesario con estos proveedores de servicio, únicamente para operar la App:</p>
+<table>
+  <tr><th>Proveedor</th><th>Qué recibe</th><th>Para qué</th></tr>
+  <tr><td>Supabase (base de datos/autenticación)</td><td>ID anónimo de cuenta, estado de desbloqueo</td><td>Guardar tu cuenta y controlar el acceso al contenido de pago</td></tr>
+  <tr><td>RevenueCat</td><td>ID anónimo de cuenta, estado de compra/suscripción</td><td>Gestionar suscripciones entre plataformas</td></tr>
+  <tr><td>Apple App Store / Google Play</td><td>Datos de pago, registros de compra</td><td>Procesar pagos (regidos por sus propias políticas de privacidad)</td></tr>
+</table>
+<p>No vendemos tus datos ni los compartimos con anunciantes.</p>
+
+<h2>5. Conservación de datos &amp; eliminación</h2>
+<p>El contenido que escribes (nombres, confesiones, listas de deseos, etc.) vive solo en tu dispositivo y se borra cuando desinstalas la App o limpias su almacenamiento. Para solicitar la eliminación de tu cuenta anónima en el servidor y del estado de desbloqueo, escríbenos al correo de abajo.</p>
+
+<h2>6. Tus derechos</h2>
+<p>Según dónde vivas, puedes tener derecho a acceder, corregir o eliminar tus datos. Como casi todo el contenido personal permanece en tu dispositivo bajo tu control, la mayoría de esos derechos se ejercen simplemente editando o borrando ese contenido en la App, o desinstalándola. Para lo que esté en nuestros servidores (tu cuenta anónima/estado de desbloqueo), escríbenos para solicitar acceso o eliminación.</p>
+
+<h2>7. Privacidad de los niños</h2>
+<p>InBloom no está dirigida a — ni debe ser usada por — menores de 18 años. No recopilamos datos de menores de forma intencionada.</p>
+
+<h2>8. Cambios en esta política</h2>
+<p>Podemos actualizar esta política a medida que la App evoluciona. Los cambios relevantes se reflejarán actualizando la fecha de "Última actualización" de arriba.</p>
+
+<h2>9. Contacto</h2>
+<p>Dudas sobre esta política o sobre tus datos: <a href="mailto:sphereoftopics@gmail.com">sphereoftopics@gmail.com</a></p>
+
+</body>
+</html>
