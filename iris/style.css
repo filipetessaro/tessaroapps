@@ -40,6 +40,10 @@ nav.top {
 nav.top a { color: #5B5270; text-decoration: none; }
 nav.top a:hover { color: #2B2440; }
 
+.lang-switch { text-align: center; font-size: 0.82rem; color: #5B5270; padding: 8px 0; background: #fff; margin: 0; }
+.lang-switch a { color: #5B5270; text-decoration: none; }
+.lang-switch strong { color: #2B2440; }
+
 section { padding: 48px 0; border-bottom: 1px solid #E2D9CF; }
 section:last-of-type { border-bottom: none; }
 h2 { font-size: 1.4rem; margin-bottom: 8px; color: #2B2440; }
