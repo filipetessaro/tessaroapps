@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidad — Veldra</title>
+<style>
+  :root {
+    --bg: #f4efe6;
+    --surface: #ffffff;
+    --ink: #241a0f;
+    --ink-dim: #6b5c47;
+    --accent: #96650c;
+    --accent-dim: #96650c22;
+    --line: #e2d6c2;
+    --mono: ui-monospace, "SF Mono", "Cascadia Mono", "JetBrains Mono", Consolas, monospace;
+    --sans: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #14100b;
+      --surface: #1c1610;
+      --ink: #f5ecdb;
+      --ink-dim: #a8987e;
+      --accent: #e8b84b;
+      --accent-dim: #e8b84b26;
+      --line: #33291b;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #14100b;
+    --surface: #1c1610;
+    --ink: #f5ecdb;
+    --ink-dim: #a8987e;
+    --accent: #e8b84b;
+    --accent-dim: #e8b84b26;
+    --line: #33291b;
+  }
+  :root[data-theme="light"] {
+    --bg: #f4efe6;
+    --surface: #ffffff;
+    --ink: #241a0f;
+    --ink-dim: #6b5c47;
+    --accent: #96650c;
+    --accent-dim: #96650c22;
+    --line: #e2d6c2;
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: var(--sans);
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .sheet {
+    max-width: 760px;
+    margin: 0 auto;
+    padding: 64px 24px 96px;
+  }
+
+  .plate {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 48px clamp(24px, 6vw, 64px);
+  }
+
+  header.title-block {
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eyebrow {
+    font-family: var(--mono);
+    font-size: 12px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 12px;
+  }
+
+  h1 {
+    font-family: var(--sans);
+    font-size: clamp(28px, 4.5vw, 38px);
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    text-wrap: balance;
+  }
+
+  .meta {
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--ink-dim);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+  }
+  .meta span { white-space: nowrap; }
+
+  nav.toc {
+    margin-bottom: 40px;
+    padding: 20px 24px;
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 3px;
+  }
+  nav.toc .toc-label {
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-dim);
+    margin: 0 0 12px;
+  }
+  nav.toc ol {
+    columns: 2;
+    column-gap: 24px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+  }
+  nav.toc li { break-inside: avoid; margin-bottom: 8px; }
+  nav.toc a {
+    color: var(--ink);
+    text-decoration: none;
+    display: flex;
+    gap: 8px;
+  }
+  nav.toc a:hover { color: var(--accent); }
+  nav.toc a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 2px; }
+  nav.toc .n { font-family: var(--mono); color: var(--accent); flex-shrink: 0; }
+
+  section.clause {
+    margin-bottom: 36px;
+    scroll-margin-top: 24px;
+  }
+  section.clause:last-of-type { margin-bottom: 0; }
+
+  .clause-head {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-bottom: 12px;
+  }
+  .clause-num {
+    font-family: var(--mono);
+    font-size: 14px;
+    color: var(--accent);
+    flex-shrink: 0;
+  }
+  h2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+    text-wrap: balance;
+  }
+
+  .clause-body { max-width: 66ch; color: var(--ink); }
+  .clause-body p { margin: 0 0 12px; }
+  .clause-body p:last-child { margin-bottom: 0; }
+  .clause-body ul { margin: 12px 0; padding-left: 20px; }
+  .clause-body li { margin-bottom: 8px; }
+  .clause-body li:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 600; }
+
+  a { color: var(--accent); }
+  a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+  footer.contact {
+    margin-top: 48px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    font-size: 14px;
+    color: var(--ink-dim);
+  }
+  footer.contact a { color: var(--accent); font-weight: 600; }
+
+  @media (max-width: 560px) {
+    .sheet { padding: 32px 12px 64px; }
+    .plate { padding: 32px 20px; border-radius: 0; }
+    nav.toc ol { columns: 1; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sheet">
+  <div class="plate">
+    <header class="title-block">
+      <p class="eyebrow">Documento legal · Veldra</p>
+      <h1>Política de Privacidad</h1>
+      <div class="meta">
+        <span>Última actualización: <strong>4 de septiembre de 2026</strong></span>
+        <span>Idioma: <a href="/veldra/privacy/">PT</a> · <a href="/veldra/en/privacy/">EN</a> · <strong>ES</strong></span>
+      </div>
+    </header>
+
+    <nav class="toc" aria-label="Índice">
+      <p class="toc-label">Índice</p>
+      <ol>
+        <li><a href="#s1"><span class="n">§1</span> El resumen</a></li>
+        <li><a href="#s2"><span class="n">§2</span> Qué se guarda en el dispositivo</a></li>
+        <li><a href="#s3"><span class="n">§3</span> Qué NO se recopila</a></li>
+        <li><a href="#s4"><span class="n">§4</span> Menores</a></li>
+        <li><a href="#s5"><span class="n">§5</span> Cómo borrar tus datos</a></li>
+        <li><a href="#s6"><span class="n">§6</span> Si esto cambia</a></li>
+        <li><a href="#s7"><span class="n">§7</span> Contacto</a></li>
+      </ol>
+    </nav>
+
+    <section class="clause" id="s1">
+      <div class="clause-head"><span class="clause-num">§1</span><h2>El resumen</h2></div>
+      <div class="clause-body">
+        <p><strong>Veldra no recopila nada.</strong> No hay cuenta, no hay inicio de sesión, no hay anuncios, no hay analítica y no hay ningún SDK de terceros recogiendo datos sobre ti.</p>
+        <p>Todo lo que el juego guarda — tu personaje, la crónica del mundo, el idioma y la preferencia de animación — se queda <strong>en tu dispositivo</strong> y no sale de él.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s2">
+      <div class="clause-head"><span class="clause-num">§2</span><h2>Qué se guarda en el dispositivo</h2></div>
+      <div class="clause-body">
+        <p>El personaje en curso y su morral; la crónica del mundo (los lugares descubiertos y terminados, dónde quedó la historia, los nombres de quienes murieron); el idioma elegido y la preferencia de animación.</p>
+        <p>Esto se escribe en el almacenamiento local de la aplicación. Nada de ello se envía a nosotros ni a nadie más.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s3">
+      <div class="clause-head"><span class="clause-num">§3</span><h2>Qué NO se recopila</h2></div>
+      <div class="clause-body">
+        <p>Nombre, correo, teléfono, contactos, ubicación, identificadores publicitarios, fotos, archivos ni nada de tu agenda.</p>
+        <p>El juego tampoco usa cookies ni rastreadores: no abre páginas web.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s4">
+      <div class="clause-head"><span class="clause-num">§4</span><h2>Menores</h2></div>
+      <div class="clause-body">
+        <p>El juego contiene violencia fantástica leve (combate contra monstruos, al estilo de D&amp;D) y no está dirigido a menores de 13 años. Como no se recopila nada, no hay datos de menores que proteger.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s5">
+      <div class="clause-head"><span class="clause-num">§5</span><h2>Cómo borrar tus datos</h2></div>
+      <div class="clause-body">
+        <p>En la pantalla inicial hay un botón <strong>Borrar todo</strong>, que elimina el personaje y la crónica del mundo del dispositivo, sin vuelta atrás.</p>
+        <p>Desinstalar la aplicación también lo elimina todo. Como nada se envía a ningún servidor, no hay nada que pedir borrar en otro sitio — y por eso Veldra no tiene página de eliminación de cuenta.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s6">
+      <div class="clause-head"><span class="clause-num">§6</span><h2>Si esto cambia</h2></div>
+      <div class="clause-body">
+        <p>Una tabla de clasificación en línea ya está escrita en el código del juego y está <strong>desactivada</strong>: ninguna parte de la aplicación la usa hoy. Si se activa — o cualquier otra función que envíe datos —, <strong>esta página se actualiza antes de que salga esa versión</strong>, diciendo exactamente qué pasa a enviarse.</p>
+        <p>La fecha en la parte superior siempre refleja la versión más reciente.</p>
+      </div>
+    </section>
+
+    <section class="clause" id="s7">
+      <div class="clause-head"><span class="clause-num">§7</span><h2>Contacto</h2></div>
+      <div class="clause-body">
+        <p><a href="mailto:contato@tessaroapps.com">contato@tessaroapps.com</a></p>
+      </div>
+    </section>
+
+    <footer class="contact">
+      Veldra — RPG de mazmorras por turnos con reglas inspiradas en D&amp;D.
+    </footer>
+  </div>
+</div>
+
+</body>
+</html>
