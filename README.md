@@ -18,6 +18,7 @@ Nada de segredo entra aqui.
 | PlantScan AI | `/plantscan/` · `privacy/` · `terms/` |
 | InBloom | `/inbloom/` · `privacy/` |
 | Idle Realms: Rise | `/idle-realms/` · `privacy/` · `terms/` · `delete-account/` |
+| Vale Cinza | `/vale-cinza/` · `privacy/` · `terms/` (só PT; sem conta, sem delete-account) |
 
 **Slugs em inglês em todos os apps**, inclusive nos de conteúdo em português: a URL é
 infraestrutura, não texto de leitura, e é o que revisor de loja espera encontrar.
