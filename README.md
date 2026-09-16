@@ -19,7 +19,7 @@ Nada de segredo entra aqui.
 | InBloom | `/inbloom/` · `privacy/` |
 | Idle Realms: Rise | `/idle-realms/` · `privacy/` · `terms/` · `delete-account/` |
 | Vale Cinza | `/vale-cinza/` · `privacy/` · `terms/` (só PT; sem conta, sem delete-account) |
-| Terrário de Monstros | `/monster-terrarium/` · `privacy/` · `terms/` (só PT; sem conta, sem delete-account; nome provisório até a Steam) |
+| Terrário de Monstros | `/monster-terrarium/` · `privacy/` · `terms/` — idem em `/en/` e `/es/` (sem conta, sem delete-account; nome provisório até a Steam) |
 
 **Slugs em inglês em todos os apps**, inclusive nos de conteúdo em português: a URL é
 infraestrutura, não texto de leitura, e é o que revisor de loja espera encontrar.
